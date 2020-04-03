@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-around;
   width: 100vw;
+  background-image: linear-gradient(to right, black, #323232);
 }
 
 .post-container {
