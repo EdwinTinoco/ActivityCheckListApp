@@ -59,32 +59,50 @@ posts_schema = PostSchema(many=True)
 def home():
     return render_template("home.html")
 
-@app.route('/login', methods=["GET","POST"])
-def login():
-    error = ''
-    users = ["edwin", "angela", "tyson", "joe", "jess", "jacob", "ryan", "kent"]
-    flag = False
+# @app.route('/login', methods=["GET","POST"])
+# def login():
+#     error = ''
+#     users = ["edwin", "angela", "tyson", "joe", "jess", "jacob", "ryan", "kent"]
+#     flag = False
 
-    try:	
-        if request.method == "POST":		
-            username = request.form['username']
-            password = request.form['password']  
+#     try:	
+#         if request.method == "POST":		
+#             username = request.form['username']
+#             password = request.form['password']  
 
-            for user in users:
-                if username == user:
-                    flag = True
-                    break
+#             for user in users:
+#                 if username == user:
+#                     flag = True
+#                     break
 
-            if flag and password == "1234":                                   
-                return redirect(url_for('home'))				
-            else:
-                error = "Invalid credentials. Try Again."
+#             if flag and password == "1234":                                   
+#                 return redirect(url_for('home'))				
+#             else:
+#                 error = "Invalid credentials. Try Again."
 
-        return render_template("login.html", error = error)
+#         return render_template("login.html", error = error)
 
-    except Exception as e:
-        return render_template("login.html", error = error)  
+#     except Exception as e:
+#         return render_template("login.html", error = error)  
 
+# ----------------------------------------------------------------------
+# API's for users request
+
+# Endpoint to create a new comment
+@app.route('/login', methods=["POST"])
+def add_login():  
+    if request.method == "POST":		
+        username = request.form['username'] 
+        password = request.form['password'] 
+        new_user = User(username, password)
+
+        db.session.add(new_user)
+        db.session.commit()    
+
+        user_1 = User.query.get(new_user.id)
+    return user_schema.jsonify(user_1)          
+
+    # return render_template("post.html")  
 
 
 if __name__ == '__main__':
