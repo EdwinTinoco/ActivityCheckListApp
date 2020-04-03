@@ -51,6 +51,15 @@ html * {
   width: 100vw;          
 }
 
+.recommend-button  {
+  border: 2px black solid;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 2px;
+  background: white;
+  margin-right: 45px;
+}
+
 .footer-tag {
   color: white;
 }
