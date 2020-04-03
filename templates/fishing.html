@@ -40,9 +40,13 @@
   </div>
 
   <div class="footer">
-    <div class="recommendation">
-      <button onclick="window.location.href = 'posts.html';" class="recommend-button">Post A Recommendation</button>
-    </div>
+    <form action="" method="POST">
+      <input type="text" class="form-control" placeholder="Address" name="address" value="{{request.form.address}}">
+      <input type="text" class="form-control" placeholder="Description" name="description" value="{{request.form.description}}">
+      <div class="recommendation">
+        <button onclick="window.location.href = 'posts.html';" class="recommend-button">Post Your Recommendation</button>    
+      </div>
+    </form>
     <div class="footer-tag">
       <h1>Share your photos with us on:</h1>
     </div>
