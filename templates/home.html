@@ -6,8 +6,110 @@
   <title>App In A Day</title>
   <script src="https://kit.fontawesome.com/23912d8913.js"></script>
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles/styles.css"> 
 
+  <style>
+    html * {
+  margin: 0;
+}
+
+/* colors: 
+orange: #F36700
+brown: #8c3e09
+grey: #323232 */
+
+.header {
+  display: flex;
+  background-image: linear-gradient(to right, #8c3e09, #F36700);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+
+.title {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logout-button  {
+  border: 2px black solid;
+  font-size: 1.5em;
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  border-radius: 2px;
+  background: white;
+  /* color: #F36700; */
+}
+
+.body {
+  display: flex;
+  width: 100vw;
+  background-image: linear-gradient(to right, black, #323232);
+}
+
+.activity-link-wrapper {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+}
+
+.activity-link {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.picture-text {
+  position: absolute;
+  top: 30px;
+  left: 92px;
+}
+
+.activity-link img {
+  height: 60vh;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.activity-link a {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  background-image: linear-gradient(to right, #8c3e09, #F36700);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;          
+}
+
+.footer-tag {
+  color: white;
+}
+
+.social-media-links-wrapper {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-around;
+  width: 25vw;
+}
+
+.social-media-links-wrapper a {
+  font-size: 2.5em;
+  color: white;
+}
+  </style>
 
 </head>
 
@@ -17,7 +119,7 @@
       <h1>Plan Your Next Outing!</h1>
     </div>
     <div class="logout">
-      <button class="logout-button">Logout</button>
+      <button onclick="window.location.href = '/login';" class="logout-button">Logout</button>
     </div>
   </div>
 
@@ -25,7 +127,7 @@
     <div class="activity-link-wrapper">
 
       <div class="activity-link">
-        <a href="hiking.html">
+        <a href="/hiking">
           <img
             src="https://images.unsplash.com/photo-1516739711484-6f80025660c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80"
             alt="Hiking Image">
@@ -33,7 +135,7 @@
         </a>
       </div>
       <div class="activity-link">
-        <a href="camping.html">
+        <a href="/camping">
 
           <img
             src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=347&q=80"
@@ -42,7 +144,7 @@
         </a>
       </div>
       <div class="activity-link">
-        <a href="fishing.html">
+        <a href="/fishing">
           <img
             src="https://images.unsplash.com/photo-1571983757398-4bcc2b03ae25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
             alt="Fishing Image">
@@ -50,7 +152,7 @@
         </a>
       </div>
       <div class="activity-link">
-        <a href="beach.html">
+        <a href="/beach">
           <img
             src="https://images.unsplash.com/photo-1525183995014-bd94c0750cd5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"
             alt="Beach Image">
@@ -61,6 +163,9 @@
   </div>
 
   <div class="footer">
+    <div class="recommendation">
+      <button onclick="window.location.href = 'posts.html';" class="recommend-button">Post A Recommendation</button>
+    </div>
     <div class="footer-tag">
       <h1>Share your photos with us on:</h1>
     </div>
