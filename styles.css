@@ -10,10 +10,10 @@ grey: #323232 */
 .header {
   display: flex;
   background-image: linear-gradient(to right, #8c3e09, #F36700);
-  /* background-color: #F36700; */
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100vw;
+  position: relative;
 }
 
 
@@ -23,12 +23,21 @@ grey: #323232 */
   margin-bottom: 30px;
 }
 
+.logout-button  {
+  border: 2px black solid;
+  font-size: 1.5em;
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  border-radius: 2px;
+  background: white;
+  /* color: #F36700; */
+}
+
 .body {
   display: flex;
   width: 100vw;
-  /* background-color: linear-gradient(to right, #323232 , black); */
   background-image: linear-gradient(to right, black, #323232);
-  /* height: 70vh; */
 }
 
 .activity-link-wrapper {
@@ -49,7 +58,6 @@ grey: #323232 */
   position: absolute;
   top: 30px;
   left: 92px;
-  /* transform: rotate(-90deg) */
 }
 
 .activity-link img {
