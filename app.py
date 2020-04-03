@@ -37,9 +37,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     address = db.Column(db.String(50), unique=False)
     description = db.Column(db.String(100), unique=False)    
-    category = db.Column(db.String(50), unique=False) 
-    # date = db.Column(db.DateTime, unique=False)
-     
+    category = db.Column(db.String(50), unique=False)   
 
     def __init__(self, address, description, category):
         self.address = address
@@ -101,8 +99,7 @@ def add_post1():
         db.session.add(new_post)
         db.session.commit()    
 
-        post_1 = Post.query.get(new_post.id)
-        # return comment_schema.jsonify(comment_1)          
+        post_1 = Post.query.get(new_post.id)                 
 
     return render_template("camping.html")  
 
