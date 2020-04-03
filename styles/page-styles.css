@@ -43,6 +43,8 @@ html * {
   /* color: #F36700; */
 }
 
+
+
 .footer {
   display: flex;
   background-image: linear-gradient(to right, #8c3e09, #F36700);
