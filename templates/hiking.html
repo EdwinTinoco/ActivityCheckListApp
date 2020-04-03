@@ -90,6 +90,11 @@
   font-size: 2.5em;
   color: white;
 }
+
+.form-control {
+    border: 1px solid black;
+    width: 310px;
+  }
   </style>
 
 </head>
@@ -156,13 +161,23 @@
   </div>
 
   <div class="footer">
-    <form action="" method="POST">
-      <input type="text" class="form-control" placeholder="Address" name="address" value="{{request.form.address}}">
-      <input type="text" class="form-control" placeholder="Description" name="description" value="{{request.form.description}}">
-      <div class="recommendation">
-        <button onclick="window.location.href = 'posts.html';" class="recommend-button">Post Your Recommendation</button>    
-      </div>
-    </form>
+    <div class="form-wrapper">
+      <form action="" method="POST">
+
+        <div class="input-wrapper">
+          <input type="text" class="form-control" placeholder="Address" name="address">
+        </div>
+        
+        <div class="input-wrapper">
+          <input type="text" class="form-control" placeholder="Description" name="description">*
+        </div>
+
+        <div class="recommendation">
+          <button onclick="window.location.href = 'posts.html';" class="recommend-button">Post Your Recommendation</button>
+        </div>
+
+      </form>
+    </div>
     <div class="footer-tag">
       <h1>Share your photos with us on:</h1>
     </div>
