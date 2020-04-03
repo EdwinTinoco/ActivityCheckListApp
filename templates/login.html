@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang='en'>
+   
 <head>
-  <meta charset='UTF-8'>
-  <title>Login</title>
+    <meta charset='UTF-8'>
+    <title>Login</title>
+    <script src="https://kit.fontawesome.com/23912d8913.js"></script>
+    <link rel="stylesheet" href="../styles/loginStyles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+ <div class="header">
+     <div class="tent"> 
+         
+         <i class="fas fa-campground"></i>
+        </div>
+        <h2 class="heading">Welcome Adventurer!</h2>
+ </div>
+<div class="loginpage"> 
+    <div class="container">
+        <div class="row">
+            <div class="banner">
+                <img 
+                src= "http://3.bp.blogspot.com/-5V5hOrWVDJM/T1jV6Pms4vI/AAAAAAAAUxc/_y0XjJyPNME/s1600/Full-HD-Desktop-Hd-nature-wallpaper-for-Desktop-Background.jpg"
+                alt="Background Image">
+
+            </div>
+        </div>
+    </div>
+ 
     <div class="form-wrapper">
-        <br>
-        <h4>Please Login:</h4>
-        <br>
+        <!-- <br> -->
+        <h4 class= "login">Please Login:</h4>
+        <!-- <br> -->
         <form action="" class="form-inline" method="POST">
-            <input type="text" class="form-control" placeholder="Username" name="username" value="{{request.form.username}}">
-            <input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
+            <input type="text" class="form-control" placeholder="Username" name="username"
+                value="{{request.form.username}}">
+            <input type="password" class="form-control" placeholder="Password" name="password"
+                value="{{request.form.password}}">
             <input type="submit" class="btn-submit" value="Login">
         </form>
+
+
+        
         <p>{{error}}</p>
+
     </div>
+</div>
+   
 
 </body>
+
+
+
 <!-- <script>
 let user = {}
     const handleSubmit = e => {
@@ -38,4 +74,5 @@ let user = {}
     }
     
 </script> -->
+
 </html>
