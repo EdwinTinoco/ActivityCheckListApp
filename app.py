@@ -172,52 +172,5 @@ def get_posts():
     return jsonify(result)
 
 
-# # Endpoint to create a new post
-# @app.route('/hiking', methods=["GET", "POST"])
-# def add_post():  
-#     if request.method == "POST":	
-#         address = request.form['address'] 
-#         description = request.form['description'] 	
-#         category = "Camping"
-        
-
-#         new_post = Post(address, description, category)
-
-#         db.session.add(new_post)
-#         db.session.commit()    
-
-#         post_1 = Post.query.get(new_post.id)
-#         # return comment_schema.jsonify(comment_1)          
-
-#     return render_template("camping.html")  
-
-# # Endpoint for querying all the posts
-# @app.route("/posts", methods=["GET"])
-# def get_posts():
-#     all_posts = Post.query.all()
-#     result = posts_schema.dump(all_posts)
-    
-#     return jsonify(result)
-
-# ----------------------------------------------------------------------
-# API's for users request
-
-# # Endpoint to create a new comment
-# @app.route('/RegisterUser/', methods=["POST"])
-# def add_login():  
-#     if request.method == "POST":		
-#         username = request.form['username'] 
-#         password = request.form['password'] 
-#         new_user = User(username, password)
-
-#         db.session.add(new_user)
-#         db.session.commit()    
-
-#         user_1 = User.query.get(new_user.id)
-#     return user_schema.jsonify(user_1)          
-
-#     # return render_template("post.html")  
-
-
 if __name__ == '__main__':
     app.run(debug=True)
