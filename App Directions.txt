@@ -1,0 +1,21 @@
+APP IN A DAY
+- Activity checklist
+- Api (db)
+- Front end
+- Production build
+- List of Activities (camping, fishing, hiking, shooting, LARPING)
+- List of supplies, etc
+- Reccomended spots
+- Looks good
+- No bugs
+- Be responsive
+- NEEDS TO BE A GIT REPO
+- 4:00pm You should be pushing live
+- Presenting at 4:30pm
+Tonight:
+NO CODING
+NO SETTING UP REPOSITORIES
+CAN UI/UX
+CAN UML
+CAN RESEARCH YOUR STACK
+
