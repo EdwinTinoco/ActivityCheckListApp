@@ -57,7 +57,7 @@ posts_schema = PostSchema(many=True)
 # API for users login
 @app.route('/home')
 def home():
-    return render_template("index.html")
+    return render_template("home.html")
 
 @app.route('/login', methods=["GET","POST"])
 def login():
