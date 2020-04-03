@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Login</title>
+</head>
+<body>
+    <div class="form-wrapper">
+        <br>
+        <h4>Please Login:</h4>
+        <br>
+        <form action="" class="form-inline" method="POST">
+            <input type="text" class="form-control" placeholder="Username" name="username" value="{{request.form.username}}">
+            <input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
+            <input type="submit" class="btn-submit" value="Login">
+        </form>
+
+        <p>{{error}}</p>
+    </div>
+
+</body>
+</html>
