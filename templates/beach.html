@@ -9,6 +9,89 @@
 
   <link rel="stylesheet" href="../styles/page-styles.css">
 
+  <style>
+    html * {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  background-image: linear-gradient(to right, #8c3e09, #F36700);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-wrapper  {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link a {
+  text-decoration: none;
+  color: white;
+}
+
+.title {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.logout-button  {
+  border: 2px black solid;
+  font-size: 1.5em;
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  border-radius: 2px;
+  background: white;
+  /* color: #F36700; */
+}
+
+
+
+.footer {
+  display: flex;
+  background-image: linear-gradient(to right, #8c3e09, #F36700);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;          
+}
+
+.recommend-button  {
+  border: 2px black solid;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 2px;
+  background: white;
+  margin-right: 45px;
+}
+
+.footer-tag {
+  color: white;
+}
+
+.social-media-links-wrapper {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-around;
+  width: 25vw;
+}
+
+.social-media-links-wrapper a {
+  font-size: 2.5em;
+  color: white;
+}
+  </style>
+
 
 </head>
 
@@ -20,18 +103,18 @@
       <div class="title">
         <h1>Plan Your Next Outing!</h1>
       </div>
-      <div onclick="window.location.href = 'login.html';" class="logout">
+      <div onclick="window.location.href = '/login';" class="logout">
         <button class="logout-button">Logout</button>
       </div>
       <div class="links-wrapper">
         <div class="link">
-          <a href="hiking.html">Hiking</a>
+          <a href="/hiking">Hiking</a>
         </div>
         <div class="link">
-          <a href="camping.html">Camping</a>
+          <a href="/camping">Camping</a>
         </div>
         <div class="link">
-          <a href="fishing.html">Fishing</a>
+          <a href="/fishing">Fishing</a>
         </div>
       </div>
     </div>
