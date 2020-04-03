@@ -22,6 +22,8 @@
 .form-input {
   margin-top: 60px;
   width: 40vw;
+  height: 30px;
+  font-size: 20px;
 }
 
 .form-box {
@@ -37,4 +39,17 @@
   margin-top: 40px;
   border-radius: 2px;
   background: white;
+}
+
+.select-box {
+  margin-top: 30px;
+  color: white;
+  display: flex;
+  font-size: 20px;
+}
+
+.dropdown {
+  margin-left: 15px;
+  height: 30px;
+  font-size: 20px;
 }
